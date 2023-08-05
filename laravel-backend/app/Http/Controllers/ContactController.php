@@ -11,9 +11,8 @@ class ContactController extends Controller
 {
     public function createContact(Request $request){
 
-        $user = Auth::user();
         $contact = Contact::create([
-            'user_id' => $user->id,
+            'user_id' => Auth::user()->id,
             'name' => $request->name,
             'phone_number' => $request->phone,
             'city' => $request->city,
@@ -29,4 +28,19 @@ class ContactController extends Controller
             'contact'=>$contact
         ],200);
     }
+
+    public function getContacts() {
+        
+        
+    }
+
+    public function updateContact() {
+        
+    }
+
+    public function deleteContact() {
+        
+    }
+
+
 }
