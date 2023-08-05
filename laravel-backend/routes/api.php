@@ -22,6 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['middleware'=>'auth:api'], function(){
     Route::post('/create', [ContactController::class, 'createContact']);
+    Route::post('/display', [ContactController::class, 'getContacts']);
+    Route::post('/edit', [ContactController::class, 'updateContact']);
+    Route::post('/delete', [ContactController::class, 'deleteContact']);
     Route::get('/logout', [AuthController::class, 'logout']);
 });
 
