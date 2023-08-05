@@ -29,17 +29,31 @@ class ContactController extends Controller
         ],200);
     }
 
-    public function getContacts() {
+    public function getContacts(Request $request) {
+        $contacts = Contact::find($request->user_id)->all();
+        return response()->json(['contacts'=>$contacts],200);
+    }
+
+    public function updateContact(Request $request) {
+        Contact::updateOrCreate(
+            ['id' => $request->id],
+            [
+                'name' => $request->name,
+                'phone_number' => $request->phone,
+                'city' => $request->city,
+                'country' => $request->country,
+                'latitude' => $request->latitude,
+                'longtitude' => $request->longtitude
+            ]
+        );
         
+        return response()->json(['status'=>true],200);
         
     }
 
-    public function updateContact() {
-        
-    }
-
-    public function deleteContact() {
-        
+    public function deleteContact(Request $request) {
+        Contact::find($request->id)->delete();
+        return response()->json(['status'=>true],200);
     }
 
 
