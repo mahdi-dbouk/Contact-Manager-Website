@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after{
+  margin:0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+
+  --primary-font-family: ;
+  --secondary-font-family:  ;
+
+  --primary-font-size: ;
+  --secondary-font-size: ;
+
+  --primary-color: ;
+  --secondary-color: ;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
+}
+
+.d-row{
+  flex-direction: row;
+}
+
+.d-column{
   flex-direction: column;
-  align-items: center;
+}
+
+.rh-center{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rv-center{
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ch-center {
+  justify-content: center;
+}
+
+.cv-center {
+  align-items: center;
+}
+
+.rh-flex-start{
+  justify-content: flex-start;
+}
+
+.rv-flex-start{
+  align-items: flex-start;
+}
+
+.ch-flex-start{
+  justify-content: flex-start;
+}
+
+.cv-flex-start{
+  align-items: flex-start;
+}
+
+.rh-flex-end{
+  justify-content: flex-end;
+}
+
+.rv-flex-end{
+  align-items: flex-end;
+}
+
+.ch-flex-end{
+  justify-content: flex-end;
+}
+
+.cv-flex-end{
+  align-items: flex-end;
+}
+
+.rh-space-evenly{
+  justify-content: space-evenly;
+}
+
+.rv-space-evenly{
+  align-items: space-evenly;
+}
+
+.ch-space-evenly{
+  justify-content: space-evenly;
+}
+
+.cv-space-evenly{
+  align-items: space-evenly;
+}
+
+.rh-space-around{
+  justify-content: space-around;
+}
+
+.rv-space-around{
+  align-items: space-around;
+}
+
+.ch-space-around{
+  justify-content: space-around;
+}
+
+.cv-space-around{
+  align-items: space-around;
+}
+
+.rh-space-between{
+  justify-content: space-between;
+}
+
+.rv-space-between{
+  align-items: space-between;
+}
+
+.ch-space-between{
+  justify-content: space-between;
+}
+
+.cv-space-between{
+  align-items: space-between;
 }
