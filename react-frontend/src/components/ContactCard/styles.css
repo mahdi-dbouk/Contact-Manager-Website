@@ -1,0 +1,26 @@
+.contact-card{
+    border-bottom: 1px blueviolet solid;
+    padding: 5px;
+    color: var(--primary-color);
+}
+
+button{
+    border: none;
+    background-color: transparent;
+    border: 1px blueviolet solid;
+    color: blueviolet;
+    padding: 5px;
+    border-radius: 75px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:active{
+    filter: brightness(70%);
+}
+
+.controls{
+    margin-top: 5px;
+}
