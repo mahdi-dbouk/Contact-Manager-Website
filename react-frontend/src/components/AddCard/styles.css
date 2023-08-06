@@ -1,0 +1,22 @@
+.add-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 75px;
+    color: var(--secondary-color);
+    background-color: blueviolet;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    box-shadow: 2px 2px 3px #515151;
+}
+
+input{
+    border: 1px rgba(137, 43, 226, 0.507) solid;
+    width: 5vw;
+}
+
+input:focus{
+    border: none;
+    outline: none;
+    border: 1px blueviolet solid;
+}
