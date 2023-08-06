@@ -16,21 +16,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'v0.0.1'], function(){
+    Route::get('/contacts', [ContactController::class, 'contacts']);
+    Route::post('/contacts/{action}', [ContactController::class, 'contactsCUD']);
 });
-
-Route::group(['middleware'=>'auth:api'], function(){
-    Route::post('/create', [ContactController::class, 'createContact']);
-    Route::post('/display', [ContactController::class, 'getContacts']);
-    Route::post('/edit', [ContactController::class, 'updateContact']);
-    Route::post('/delete', [ContactController::class, 'deleteContact']);
-    Route::get('/logout', [AuthController::class, 'logout']);
-});
-
-Route::group(['prefix' => '/auth'], function(){
-    Route::post('/login', [AuthController::class, 'login']);
-    Route::post('/register', [AuthController::class, 'register']);
-});
-
-Route::get('unauthorized', [AuthController::class, 'unauthorized'])->name("unauthorized");

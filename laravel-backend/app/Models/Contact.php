@@ -10,7 +10,6 @@ class Contact extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id',
         'name',
         'phone_number',
         'city',
@@ -19,6 +18,4 @@ class Contact extends Model
         'longtitude'
     ];
 
-    protected $cast = [
-    ];
 }
