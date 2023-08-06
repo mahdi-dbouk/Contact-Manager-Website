@@ -133,6 +133,21 @@ body{
   align-items: space-between;
 }
 
+.g-4{
+  gap: 4px;
+}
+
+.g-8{
+  gap: 8px;
+}
+
+.g-12{
+  gap: 12px;
+}
+.g-20{
+  gap: 20px;
+}
+
 header{
   height: 5rem;
   background-color: blueviolet;
@@ -147,7 +162,30 @@ header{
 }
 
 .aside{
+  overflow-y: scroll;
   width: 35vw;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  width: 1px;
+  background-color: rgba(137, 43, 226, 0.222);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(137, 43, 226, 0.795);
+  border-radius: 75px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: blueviolet;
 }
 
 .map-container{

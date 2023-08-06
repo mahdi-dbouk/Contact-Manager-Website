@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import WebFont from 'webfontloader';
 import './App.css';
+import AddCard from './components/AddCard';
+import ContactList from './components/ContactList';
 
 function App() {
 
@@ -20,7 +22,9 @@ function App() {
       </header>
       <div className="main flex d-row">
         <div className="aside flex d-column">
-          
+          <ContactList/>
+          <AddCard />
+
         </div>
         <div className="map-container">
 
