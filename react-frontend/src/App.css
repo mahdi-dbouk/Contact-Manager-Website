@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after{
+  margin:0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,
+body{
+  font-family: 'Open Sans';
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root{
+
+  --primary-font-family: 'Open Sans';
+  --secondary-font-family:  'Helvetica';
+
+  --primary-font-size: 24px;
+  --secondary-font-size: 16px;
+
+  --primary-color: #212121;
+  --secondary-color: whitesmoke;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex{
   display: flex;
+}
+
+.d-row{
+  flex-direction: row;
+}
+
+.d-column{
   flex-direction: column;
-  align-items: center;
+}
+
+.rh-center{
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.rv-center{
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ch-center {
+  justify-content: center;
+}
+
+.cv-center {
+  align-items: center;
+}
+
+.rh-flex-start{
+  justify-content: flex-start;
+}
+
+.rv-flex-start{
+  align-items: flex-start;
+}
+
+.ch-flex-start{
+  justify-content: flex-start;
+}
+
+.cv-flex-start{
+  align-items: flex-start;
+}
+
+.rh-flex-end{
+  justify-content: flex-end;
+}
+
+.rv-flex-end{
+  align-items: flex-end;
+}
+
+.ch-flex-end{
+  justify-content: flex-end;
+}
+
+.cv-flex-end{
+  align-items: flex-end;
+}
+
+.rh-space-evenly{
+  justify-content: space-evenly;
+}
+
+.rv-space-evenly{
+  align-items: space-evenly;
+}
+
+.ch-space-evenly{
+  justify-content: space-evenly;
+}
+
+.cv-space-evenly{
+  align-items: space-evenly;
+}
+
+.rh-space-around{
+  justify-content: space-around;
+}
+
+.rv-space-around{
+  align-items: space-around;
+}
+
+.ch-space-around{
+  justify-content: space-around;
+}
+
+.cv-space-around{
+  align-items: space-around;
+}
+
+.rh-space-between{
+  justify-content: space-between;
+}
+
+.rv-space-between{
+  align-items: space-between;
+}
+
+.ch-space-between{
+  justify-content: space-between;
+}
+
+.cv-space-between{
+  align-items: space-between;
+}
+
+header{
+  height: 5rem;
+  background-color: blueviolet;
+  color: var(--secondary-color);
+  font-weight: bold;
+
+}
+
+.main{
+  height: calc(100vh - 5rem);
+  width: 100vw;
+}
+
+.aside{
+  width: 35vw;
+}
+
+.map-container{
+  width: 75vw;
 }
