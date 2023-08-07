@@ -190,4 +190,10 @@ header{
 
 .map-container{
   width: 75vw;
+  height: calc(100vh - 5rem);
+}
+
+.leaflet-container{
+  width: 75vw;
+  height: calc(100vh - 5rem);
 }

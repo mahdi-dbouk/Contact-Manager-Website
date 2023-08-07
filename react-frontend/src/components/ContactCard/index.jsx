@@ -3,7 +3,20 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faEdit, faLocationPin, faTrash} from '@fortawesome/free-solid-svg-icons';
 
 
-function ContactCard({name, phone, city, country, lat, lng}) {
+function ContactCard({id, name, phone, city, country, lat, lng, setContactID, setContactDetails}) {
+
+    const handleContactDetails = () => {
+        const contact_obj = {
+            name: name,
+            phone: phone,
+            city: city,
+            country: country,
+            latitude: lat,
+            longtitude: lng
+        }
+
+        setContactDetails(contact_obj);
+    }
     return(
         <div className='contact-card flex d-column'>
             <div className='flex d-row g-4'>
@@ -23,9 +36,9 @@ function ContactCard({name, phone, city, country, lat, lng}) {
                 <span>(lat: {lat}, lng: {lng})</span>
             </div>
             <div className="controls flex d-row rh-flex-end g-4">
-                <button><FontAwesomeIcon icon={faLocationPin}/> Locate</button>
+                <button onClick={handleContactDetails}><FontAwesomeIcon icon={faLocationPin}/> Locate</button>
                 <button><FontAwesomeIcon icon={faEdit}/> Edit</button>
-                <button><FontAwesomeIcon icon={faTrash}/> Delete</button>
+                <button onClick={()=>setContactID(id)}><FontAwesomeIcon icon={faTrash}/> Delete</button>
             </div>
         </div>
     );
