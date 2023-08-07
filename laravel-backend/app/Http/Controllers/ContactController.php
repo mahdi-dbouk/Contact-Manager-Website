@@ -11,7 +11,7 @@ class ContactController extends Controller
 
     public function contacts(){
         try{
-            $this->getContacts();  
+           return $this->getContacts();  
         }
         catch(Throwable $th){
             return response()->json(['error' => "Could not retieve contacts"], 200);
