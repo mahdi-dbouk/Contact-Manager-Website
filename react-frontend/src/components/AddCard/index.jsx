@@ -69,7 +69,7 @@ function AddCard({contacts, setContacts}) {
             </div>
             <div className='flex d-row g-4'>
                 <h4>Country:</h4>
-                <input name='country' type="text" defaultValue={input.country} value={input.city} onChange={handleValueChange}/>
+                <input name='country' type="text" defaultValue={input.country} value={input.country} onChange={handleValueChange}/>
             </div>
             <div className='flex d-row g-4'>
                 <h4>Location:</h4>
